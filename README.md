@@ -3,4 +3,4 @@
 
 | #   | title | editorial | difficulty |
 | :-: | ----- |    :--:   |    :--:    |
-| 1 | [Tow Sum]() | [:blue_book:](https://leetcode.com/articles/two-sum/) | easy |
+| 1 | [Tow Sum]() | [:book:](https://leetcode.com/articles/two-sum/) | :star: |
