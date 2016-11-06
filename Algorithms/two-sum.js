@@ -21,27 +21,20 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-    /**
-     * @param {number[]} nums
-     * @param {number} target
-     * @return {number[]}
-     */
-    var twoSum = function (nums, target) {
-        var l = nums.length - 1,
-            sub = null,
-            tmp = null,
-            value = null,
-            hash = {};
-        while (l >= 0) {
-            value = nums[l];
-            sub = target - value;
-            tmp = hash[sub];
-            if (tmp && tmp != l) {
-                return [l, tmp];
-            } else {
-                hash[value] = l;
-            }
-            l = l - 1;
+    var l = nums.length - 1,
+        sub = null,
+        tmp = null,
+        value = null,
+        hash = {};
+    while (l >= 0) {
+        value = nums[l];
+        sub = target - value;
+        tmp = hash[sub];
+        if (tmp && tmp != l) {
+            return [l, tmp];
+        } else {
+            hash[value] = l;
         }
-    };
+        l = l - 1;
+    }
 };
