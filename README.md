@@ -3,4 +3,4 @@
 
 | #   | title | editorial | difficulty |
 | :-: | ----- |    :--:   |    :--:    |
-| 1 | [Tow Sum]() | [:book:](https://leetcode.com/articles/two-sum/) | :star: |
+| 1 | [Tow Sum](https://github.com/snayan/LeetCode-Solution/blob/master/Algorithms/tow-sum.js) | [:book:](https://leetcode.com/articles/two-sum/) | :star: |
