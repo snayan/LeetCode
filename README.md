@@ -3,4 +3,5 @@
 
 | #   | title | editorial | difficulty |
 | :-: | ----- |    :--:   |    :--:    |
-| 1 | [Tow Sum](https://github.com/snayan/LeetCode-Solution/blob/master/Algorithms/tow-sum.js) | [:book:](https://leetcode.com/articles/two-sum/) | :star: |
+| 1 | [Two Sum](https://github.com/snayan/LeetCode-Solution/blob/master/Algorithms/two-sum.js) | [:book:](https://leetcode.com/articles/two-sum/) | :star: |
+| 2 | [Add Two Numbers](https://github.com/snayan/LeetCode-Solution/blob/master/Algorithms/add-two-numbers.js)|[:book:](https://leetcode.com/articles/add-two-numbers/)| :star::star: |
