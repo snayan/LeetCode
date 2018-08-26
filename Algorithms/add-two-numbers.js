@@ -49,7 +49,7 @@ var addTwoNumbers = function (l1, l2) {
     return result;
 };
 
-
+/* 方法二 */
 var addTwoNumbers = function(l1, l2) {
   let l3 = new ListNode(0);
   let result = l3;
@@ -92,6 +92,7 @@ var addTwoNumbers = function(l1, l2) {
   return result;
 };
 
+/* 方法三 */
 var addTwoNumbers = function(l1, l2) {
   let l3 = l1;
   let sum;
