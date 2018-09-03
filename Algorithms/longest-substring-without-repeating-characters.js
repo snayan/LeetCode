@@ -1,37 +1,46 @@
-/**
- * Created by zhangyang on 06/11/2016.
- */
-
 /*
- Given a string, find the length of the longest substring without repeating characters.
+ 给定一个字符串，找出不含有重复字符的最长子串的长度。
 
- Examples:
+示例 1:
 
- Given "abcabcbb", the answer is "abc", which the length is 3.
+输入: "abcabcbb"
+输出: 3
+解释: 无重复字符的最长子串是 "abc"，其长度为 3。
+示例 2:
 
- Given "bbbbb", the answer is "b", with the length of 1.
+输入: "bbbbb"
+输出: 1
+解释: 无重复字符的最长子串是 "b"，其长度为 1。
+示例 3:
 
- Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+输入: "pwwkew"
+输出: 3
+解释: 无重复字符的最长子串是 "wke"，其长度为 3。
+     请注意，答案必须是一个子串，"pwke" 是一个子序列 而不是子串。
  */
 
 /**
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function (s) {
-    var length = s.length,
-        result = 0,
-        value = null,
-        hash = {};
-    if (!length) {
-        return 0;
+var lengthOfLongestSubstring = function(s) {
+  let v, i, j;
+  let hash = {};
+  let l = s.length;
+  let r = [];
+  if (l < 2) {
+    return l;
+  }
+  for (i = 0, j = 0; i < l; i++) {
+    v = s[i];
+    if (hash[v] > j - 1) {
+      r.push(i - j);
+      j = hash[v] + 1;
     }
-    for (var start = 0, end = 0; end < length; end++) {
-        value = s[end];
-        hash[value] = hash[value] || -1;
-        start = Math.max(start, hash[value]);
-        result = Math.max(result, end - start + 1);
-        hash[value] = end + 1;
-    }
-    return result;
+    hash[v] = i;
+  }
+  r.push(i - j);
+  return Math.max.apply(null, r);
 };
+
+console.log(lengthOfLongestSubstring('pwwkew'));
